@@ -1,0 +1,34 @@
+" Something about lines
+set relativenumber
+set number
+
+" easily comment
+set commentary
+
+
+" change leader
+let mapleader = ","
+
+map <Leader>r :action RenameElement<CR>
+
+map <Leader>s :action FileStructurePopup<CR>
+
+" remap escape key
+inoremap jj <Esc>
+
+" Copy to system clipboard as well
+set clipboard+=unnamed
+
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gs :action GotoSuperMethod<CR>
+
+
+nnoremap <C-o> :action Back<CR>
+nnoremap <C-p> :action Forward<CR>
