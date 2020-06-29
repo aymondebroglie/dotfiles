@@ -10,7 +10,6 @@ set commentary
 let mapleader = ","
 
 map <Leader>r :action RenameElement<CR>
-
 map <Leader>s :action FileStructurePopup<CR>
 
 " remap escape key
@@ -28,6 +27,7 @@ nnoremap <C-l> <C-w>l
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gs :action GotoSuperMethod<CR>
+nnoremap gt :action ShowUsages<CR>
 
 
 nnoremap <C-o> :action Back<CR>
