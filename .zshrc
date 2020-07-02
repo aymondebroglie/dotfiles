@@ -113,3 +113,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 conda activate auto-glm
+
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
