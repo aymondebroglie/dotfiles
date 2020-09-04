@@ -32,3 +32,6 @@ nnoremap gt :action ShowUsages<CR>
 
 nnoremap <C-o> :action Back<CR>
 nnoremap <C-p> :action Forward<CR>
+
+" plugin vim-exchange
+set exchange
