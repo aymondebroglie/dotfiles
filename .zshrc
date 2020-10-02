@@ -98,6 +98,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias bl="cd /Users/aymondebroglie/auto-glm/app/python_envs; black .;"
+alias gau="git add -u ; git status"
+alias fmt="/Users/aymondebroglie/auto-glm/ci/formatting/need_formatting.sh -f"
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/aymondebroglie/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"

@@ -111,3 +111,15 @@ inoremap jj <Esc>
 
 " Copy to system clipboard as well
 set clipboard+=unnamed
+
+" delete etc without changing buffer
+nnoremap x "_x
+nnoremap d "_d
+nnoremap D "_D
+vnoremap d "_d
+vnoremap p "_dP
+
+vnoremap <leader>p ""dP
+nnoremap <leader>d ""d
+nnoremap <leader>D ""D
+vnoremap <leader>d ""d

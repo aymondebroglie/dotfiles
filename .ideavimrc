@@ -18,12 +18,26 @@ inoremap jj <Esc>
 " Copy to system clipboard as well
 set clipboard+=unnamed
 
-
+" window management
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" delete etc without changing buffer
+nnoremap x "_x
+nnoremap d "_d
+nnoremap D "_D
+vnoremap d "_d
+vnoremap p "_dP
+
+vnoremap <leader>p ""dP
+nnoremap <leader>d ""d
+nnoremap <leader>D ""D
+vnoremap <leader>d ""d
+
+
+" intellij specific
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gs :action GotoSuperMethod<CR>
@@ -35,3 +49,6 @@ nnoremap <C-p> :action Forward<CR>
 
 " plugin vim-exchange
 set exchange
+
+" plugin surroung
+set surround
