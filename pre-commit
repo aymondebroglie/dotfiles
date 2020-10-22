@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# java formatting
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../../ci/formatting/" && pwd )"
+GIT_PATH="$(git rev-parse --show-toplevel)"
+JAVA_FILES="$(git diff --name-only --cached | grep java |sed -e "s;^;${GIT_PATH}/;" | tr "\n " " ")"
+
+echo "Checking for formatting issues..."
+export WRONG_FILES=$(java -jar ${DIR}/google-java-format-1.7-all-deps.jar --replace  --aosp --set-exit-if-changed --skip-sorting-imports ${JAVA_FILES})
+[[ ! -z "$WRONG_FILES" ]] && echo "->Formatting issues" && echo ${WRONG_FILES}| tr " " "\n" && exit 1 || echo "-> Everything properly formatted."
+
+# python formatting 
+cd /Users/aymondebroglie/auto-glm/app/python_envs; black .;
+
+
+git add -u ;
