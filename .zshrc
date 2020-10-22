@@ -100,20 +100,21 @@ source $ZSH/oh-my-zsh.sh
 alias bl="cd /Users/aymondebroglie/auto-glm/app/python_envs; black .;"
 alias gau="git add -u ; git status"
 alias fmt="/Users/aymondebroglie/auto-glm/ci/formatting/need_formatting.sh -f"
+
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/aymondebroglie/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/aymondebroglie/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/aymondebroglie/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/aymondebroglie/opt/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/aymondebroglie/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/aymondebroglie/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/aymondebroglie/opt/miniconda3/bin:$PATH"
+        export PATH="/Users/aymondebroglie/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 conda activate auto-glm
-
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
