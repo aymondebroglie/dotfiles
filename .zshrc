@@ -96,17 +96,18 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias ohmyzsh="mate ~/.oh-my-zsho
+
 alias bl="cd /Users/aymondebroglie/auto-glm/app/python_envs; black .;"
 alias gau="git add -u ; git status"
 alias fmt="/Users/aymondebroglie/auto-glm/ci/formatting/need_formatting.sh -f"
-
+alias redisflush="docker exec -i glm-redis bash -c 'redis-cli FLUSHALL;exit;'"
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/aymondebroglie/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
+ __conda_setup="$('/Users/aymondebroglie/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+ if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
     if [ -f "/Users/aymondebroglie/miniconda3/etc/profile.d/conda.sh" ]; then
@@ -118,3 +119,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 conda activate auto-glm
+
+
+export PATH="/usr/local/opt/awscli@1/bin:$PATH"
