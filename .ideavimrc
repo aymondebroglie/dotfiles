@@ -42,6 +42,4 @@ nnoremap <C-p> :action Forward<CR>
 
 " plugin vim-exchange
 set exchange
-
-" plugin surroung
-set surround
+set NERDTree

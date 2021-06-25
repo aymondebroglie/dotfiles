@@ -102,6 +102,12 @@ alias bl="cd /Users/aymondebroglie/auto-glm/app/python_envs; black .;"
 alias gau="git add -u ; git status"
 alias fmt="/Users/aymondebroglie/auto-glm/ci/formatting/need_formatting.sh -f"
 alias redisflush="docker exec -i glm-redis bash -c 'redis-cli FLUSHALL;exit;'"
+
+deploy_key(){
+    /Users/aymondebroglie/tools/ec2/deploy_key.sh "$1"
+}
+eval $(thefuck --alias)
+
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # >>> conda initialize >>>
